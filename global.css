@@ -1,0 +1,31 @@
+*{
+  font-family: "Didact Gothic", Times, serif;
+  margin: 0;
+  padding: 0;
+   -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+ -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+}
+
+html, body{
+  height:100%;
+  overflow: hidden;
+}
+body{
+  relative;
+}
+
+@font-face{
+  font-family: basic;
+  font-weight:bold;
+  src: url(https://cdn.glitch.com/1e82efbe-513c-4b39-abf6-1269231807b0%2FBasicaline-NonCommercial.otf?v=1565734486624);
+ }
+
+@font-face{
+  font-family: "Didact Gothic";
+  font-weight:bold;
+  src: url(https://cdn.glitch.com/1e82efbe-513c-4b39-abf6-1269231807b0%2Fdidactgothic-regular.otf?v=1565736470209)
+}
