@@ -2,10 +2,10 @@
   font-family: "Didact Gothic", Times, serif;
   margin: 0;
   padding: 0;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+  -webkit-touch-callout: initial; /* iOS Safari */
+  -webkit-user-select: initial; /* Safari */
+  -ms-user-select: initial; /* Internet Explorer/Edge */
+  user-select: initial; /* Non-prefixed version, currently supported by Chrome and Opera */
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
