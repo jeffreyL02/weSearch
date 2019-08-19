@@ -1,0 +1,24 @@
+body{
+  display: inline-block;
+  margin: 8% 2% 0 2%;
+  width: 100vw;
+  height:100vh;
+}
+
+h3{
+  display: inline-block;
+  letter-spacing:0.2em;
+  font-family: basic, Times, serif;
+  font-size: 8vw;
+  margin-bottom: 10vh;
+}
+
+#pfp{
+  height: 30vw;
+  border-radius:50%;
+  display: inline-block;
+}
+#edit{
+  width: 6vw;
+  height:auto;
+}
