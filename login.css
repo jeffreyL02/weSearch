@@ -1,10 +1,10 @@
 body{
-text-align: center;
-display: inline-block;
-background: rgb(226,231,232);
-background: linear-gradient(180deg, rgba(226,231,232,1) 0%, rgba(255,255,255,1) 51%, rgba(155,183,189,1) 100%);
-width: 100vw;
-height:100vh;
+  text-align: center;
+  display: inline-block;
+  background: rgb(226,231,232);
+  background: linear-gradient(180deg, rgba(226,231,232,1) 0%, rgba(255,255,255,1) 51%, rgba(155,183,189,1) 100%);
+  width: 100vw;
+  height:100vh;
 }
 
 input{
