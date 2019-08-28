@@ -39,15 +39,17 @@ input:focus{
   color:black;
   display:inline-block;
   background-color: #c1cbce;
-  width: 77vw;
-  height: 76vh;
+  width: 90vw;
+  height: 83vh;
   position: fixed;
+  z-index:0;
   bottom:0;
   left:6vw;
-  padding:4em;
-  padding-top:30;
   border-radius:5% 5% 0 0;
-
+}
+#content{
+  padding:4em;
+  margin-bottom:4em;
 }
 #pfp{
   display:block;
@@ -64,9 +66,26 @@ input:focus{
 }
 
 .collapsible{
-
+  background-color: #c1cbce;
+  color:black;
+  cursor: pointer;
+  padding: 1em;
+  width:100%;
+  border:none;
+  border-top:#8a9497 .2vh solid;
+  text-align:left;
+  height: 8vh;
+  outline: none;
+  font-size: 5vw;
 }
 
 .content{
-  
+  position: relative;
+  z-index:3;
+  max-height: 0;
+  display:none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color:#d9e3e6;
+  font-size:4.5vw;
 }

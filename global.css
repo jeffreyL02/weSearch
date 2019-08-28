@@ -14,9 +14,6 @@ html, body{
   width:100%;
   overflow: hidden;
 }
-body{
-  relative;
-}
 
 @font-face{
   font-family: basic;
