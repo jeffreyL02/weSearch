@@ -16,6 +16,10 @@ firebase-debug.log*
 # it commented so all members can deploy to the same project(s) in .firebaserc.
 # .firebaserc
 
+# firebase info
+init.js
+init.mjs
+
 # Runtime data
 pids
 *.pid
