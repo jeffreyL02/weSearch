@@ -44,10 +44,15 @@
 }
 
 #mainNav p{
-  margin-top:2.5vh;
-  font-size:8vh;
+  display: inline-block;
+  letter-spacing:0.2em;
+  margin-top:3vh;
+  font-size:6vh;
   font-family: basic, serif;
 }
-#mainNav p: ::before{
-  content: url("/assets/pointLeft.svg");
+#mainNav img{
+  float:left;
+  display: inline-block;
+  height: 70%;
+  margin-top: 5vh;
 }
