@@ -10,8 +10,9 @@ document.getElementById("login").addEventListener("click", function(){
 const inputs = document.getElementsByTagName('input');
 document.getElementById("signUp").addEventListener("click", () => {
   if (inputs[3].value === inputs[4].value){
-		AUTH.createUserWithEmailAndPassword(inputs[1].value, inputs[2].value).then(() => {
-		window.location.href = "listings.html";
+		AUTH.createUserWithEmailAndPassword(inputs[2].value, inputs[3].value).then(() => {
+			window.location.href = "listings.html";
+
 		}).catch(e => alert(e));
   }else{
     alert("Password Mismatch!!");
