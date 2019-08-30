@@ -1,5 +1,5 @@
-import data from './init.mjs';
-firebase.initializeApp(data);
+import {firebaseConfig} from "./init.js"
+firebase.initializeApp(firebaseConfig);
 
 const AUTH = firebase.auth();
 
