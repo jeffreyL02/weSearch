@@ -20,3 +20,25 @@
   font-weight:bold;
   src: url(https://cdn.glitch.com/1e82efbe-513c-4b39-abf6-1269231807b0%2Fdidactgothic-regular.otf?v=1565736470209)
 }
+
+#mainNav{
+  z-index:5;
+  height: 12vh;
+  width:100%;
+  background-color:#98a2a5;
+  position: fixed;
+  top:0;
+}
+
+.navBtn{
+  display: inline-block;
+  height:100%;
+  width: 33%;
+  text-align: center;
+}
+
+.navBtn img{
+  padding-top:2vh;
+  height:75%;
+  width:auto;
+}

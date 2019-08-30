@@ -22,6 +22,7 @@ input{
 }
 
 input:focus{
+  background-color: linear-gradient(rgba(168,192,197,0.9), rgba(0,0,0,0));
   border-bottom: black solid 0.1em;
   width: 60%;
 }
