@@ -8,7 +8,7 @@ document.getElementById("signUp").addEventListener("click", function(){
 });
 
 let loginPassword = document.getElementById("password");
-document.getElementById("submit").addEventListener("click", () => {
+document.getElementById("login").addEventListener("click", () => {
   AUTH.signInWithEmailAndPassword(document.getElementById("username").value, loginPassword.value).then(() => {
     window.location.href = "listings.html";
   }).catch(e => {
