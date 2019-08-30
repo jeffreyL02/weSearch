@@ -3,7 +3,6 @@ body{
   display: inline-block;
   width: 100vw;
   height:100vh;
-  padding: 20% 1.5% 0 1.5%;
 }
 
 h3{
@@ -34,17 +33,16 @@ input:focus{
   width: 60%;
 }
 
-
 #box{
   color:black;
   display:inline-block;
   background-color: #c1cbce;
   width: 90vw;
-  height: 83vh;
+  height: 73vh;
   position: fixed;
   z-index:0;
   bottom:0;
-  left:6vw;
+  left:4.9vw;
   border-radius:5% 5% 0 0;
 }
 #content{
@@ -56,7 +54,7 @@ input:focus{
   z-index:2;
   position:fixed;
   width: 30vw;
-  margin: 0 0 9% 35vw;
+  margin: 33% 0 9% 35vw;
   border-radius:50%;
 }
 
