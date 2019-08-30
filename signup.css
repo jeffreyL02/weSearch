@@ -33,7 +33,7 @@ input:focus{
   width: 60%;
 }
 
-#signUpBtn{
+#signUp{
   margin: 8% 0 4% 25%;
   color:white;
   background-color:#535e61;
@@ -47,7 +47,7 @@ input:focus{
 }
 
 
-#signUpBtn:active{
+#signUp:active{
   background-color: #333b3d;
   transform:translateY(0.2vh);
 }
