@@ -11,8 +11,27 @@
 	position: relative;
 	left: 5%;
 }
+
+#addPerson{
+	padding: 2em 2em 2em 3em;
+	border: dashed 5.5px rgb(150,150,150);
+	width:70%;
+	margin:4vh auto 1vh auto;
+}
+#addPerson img{
+	display: inline-block;
+	height:3vh;
+	opacity:0.5;
+}
+#addPersonInfo{
+	color:rgb(120,120,120);
+	text-align: left;
+	font-size: 4em;
+}
+
 .person img{
 	width: 16%;
+	border: ridge 2px rgba(0, 0, 0, 0.2);
 	border-radius: 50%;
 	margin: 6% 3% 6% 5%;
 	position: relative;

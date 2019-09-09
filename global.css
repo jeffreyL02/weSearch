@@ -20,3 +20,42 @@
   font-weight:bold;
   src: url(https://cdn.glitch.com/1e82efbe-513c-4b39-abf6-1269231807b0%2Fdidactgothic-regular.otf?v=1565736470209)
 }
+
+#mainNav{
+  z-index:5;
+  height: 12vh;
+  width:100%;
+  background-color:#98a2a5;
+  position: fixed;
+  top:0;
+}
+#navSections{
+  height:80%;
+}
+.navBtn{
+  height:20%;
+  width: 100%;
+  text-align: center;
+}
+
+.navBtn img{
+  padding-top:2vh;
+  height:75%;
+  width:auto;
+}
+
+#mainNav p{
+  display: inline-block;
+  letter-spacing:0.2em;
+  margin-top:3vh;
+  font-size:6vh;
+  font-family: basic, serif;
+  margin-right: 12vw;
+}
+#mainNav img{
+  float:left;
+  display: inline-block;
+  height: 60%;
+  margin-top: 2.5vh;
+  margin-left: 3vw;
+}

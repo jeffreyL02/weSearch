@@ -1,6 +1,5 @@
-#mainNav{
-  height: 100vh;
-  background-color:#98a2a5;
-  position: absolute;
-  bottom:0;
+body{
+  margin:0;
+  border:0;
+  text-align: center;
 }
