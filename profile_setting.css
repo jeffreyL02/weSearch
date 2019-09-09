@@ -77,13 +77,41 @@ input:focus{
   font-size: 5vw;
 }
 
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
 .content{
-  position: relative;
-  z-index:3;
-  max-height: 0;
-  display:none;
-  overflow: hidden;
+  overflow:scroll;
   transition: max-height 0.2s ease-out;
+  max-height: 13vh;
   background-color:#d9e3e6;
   font-size:4.5vw;
+  text-align: left;
+  padding: 1.5vh 3vh 1.5vh 3vh;
+}
+
+.profilepic{
+  height: 10vw;
+  border-radius: 50%;
+}
+
+.report{
+  margin-bottom: 1vh;
+  border-bottom: gray;
+}
+.report h5{
+  font-size:4vw;
+  display: inline-block;
+}
+.report img{
+  display: inline-block;
 }
