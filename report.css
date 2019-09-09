@@ -1,11 +1,7 @@
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
-img {
-  vertical-align: middle;
-  height: 20%;
-  overflow: none;
-}
+img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
@@ -16,6 +12,7 @@ img {
 
 /* Next & previous buttons */
 .prev, .next {
+  cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
