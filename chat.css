@@ -1,5 +1,64 @@
-body{
+*{
   margin:0;
   border:0;
-  text-align: center;
+}
+
+#header{
+	background-color: #555555;
+	position: sticky;
+	height: 10vh;
+	top: 0;
+	z-index: 100;
+}
+
+#mapIcon{
+	position: absolute;
+	right: 0;
+	height: 65%;
+	margin-top: 2.5%;
+	margin-right: 2.5%;
+
+}
+
+#logo{
+	position: absolute;
+	left: 27.5%;
+	font-size: 700%;
+}
+
+#backbtn{
+	height: 65%;
+	position: absolute;
+	left: 0;
+	margin-top: 2.5%;
+	margin-left: 2.5%;
+}
+
+#pfp{
+	border-radius: 50%;
+	width: 12.5%;
+	display: inline-block;
+}
+#text{
+	display: inline-block;
+	width: 50%;
+	background-color: #777777;
+	border-radius: 15%;
+	padding:3%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	font-size: 02em;
+}
+#messageRev{
+	margin: 5% 0 0 2.5%;
+	position: relative;
+	left: 0;
+}
+#messageSen{
+	margin: 5% 0 0 2.5%;
+	position: relative;
+	right: -22.5%;
+}
+#qwer{
+	height:20%;
 }
