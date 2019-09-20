@@ -1,7 +1,6 @@
 body{
   text-align: center;
   display: inline-block;
-  background: rgb(226,231,232);
   background: linear-gradient(180deg, rgba(226,231,232,1) 0%, rgba(255,255,255,1) 51%, rgba(155,183,189,1) 100%);
   width: 100vw;
   height:100vh;
@@ -15,14 +14,13 @@ input{
   margin: 0 auto 0.5em auto;
   width: 50%;
   padding: 0.4em;
-  border:none;
-  border-bottom: black solid 0.1em;
+  border: none;
+  border-bottom: rgba(0,0,0,0.2) solid 0.1em;
   outline:none;
-  transition: 0.5s;
+  transition: all cubic-bezier(0.0, 0.0, 0.2, 1) 0.5s;
 }
 
 input:focus{
-  background-color: linear-gradient(rgba(168,192,197,0.9), rgba(0,0,0,0));
   border-bottom: black solid 0.1em;
   width: 60%;
 }
