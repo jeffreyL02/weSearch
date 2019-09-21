@@ -4,14 +4,55 @@
 	<title>Listings</title>
 	<link rel="stylesheet" type="text/css" href="listings.css">
     <link rel="stylesheet" type="text/css" href="global.css">
+		<script src="listings.js" defer></script>
 </head>
 <body>
+	<div id="black">
+	</div>
+	<div id="modal">
+		<h3>ADD REPORT</h3>
+
+		<div id="stepOne">
+			<div id="editpfp">
+				<img style="position:relative;top:1vh;height:5vh; width:5vh"src="assets/edit.svg"/>
+			</div>
+			<div id="pfp">
+			</div>
+			<div style="margin-top:2em">
+				<input type="text" placeholder="first name"/>
+				<input type="text" placeholder="last name" />
+				<input type="number" placeholder="age" style="width:20%;" />
+
+			</div>
+		</div>
+		<div id="stepTwo">
+			<p style="font-size:3.3vh;margin-top:0.7em">
+				date last seen:
+			</p>
+			<input style="width:50%;"type="date" />
+				<div class="sex">
+					<img style="height:80%;width:auto;"src="/assets/male.png" />
+				</div>
+				<div class="sex" style="background-color:rgb(255,255,255)">
+					<img style="height:80%;width:auto;"src="/assets/female.png" />
+			</div>
+
+			<textarea id="otherInfo" placeholder="other information..."></textarea>
+		</div>
+		<div id="placementDots">
+			<div class="dot">
+			</div>
+			<div class="dot">
+			</div>
+			<div class="dot">
+			</div>
+		</div>
+	</div>
 	<div id="workspace">
-		<p id="heading">Listings</p>
 			<div id="addPerson">
 				<div id="addPersonInfo">
 					<img src="/assets/plusSign.png" />
-					Add report
+					Add reports
 				</div>
 			</div>
 
@@ -80,8 +121,6 @@
 			<div id="border"></div>
 		</div>
 	</div>
-	<div id="navbar">
 
-	</div>
 </body>
 </html>
