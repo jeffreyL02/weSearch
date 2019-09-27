@@ -8,6 +8,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
     display: none;
 	}
+
+/* this is modal stuff*/
+/* the black thing that shows up when u open up a modal */
 #black{
 	position: fixed;
 	z-index:3;
@@ -16,6 +19,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
 }
+
+/*self-explanatory*/
 #modal{
 	top:10%;
 	background-color:white;
@@ -28,11 +33,20 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	width:80%;
 	border-radius: 2vh;
 }
+
 #stepOne{
+
 }
 #stepTwo{
-	display: none;
+  display: none;
 	text-align: center;
+  margin-top: 1.9em;
+}
+#stepThree{
+  display: none;
+  text-align: center;
+  margin-top: 1.9em;
+
 }
 #modal h3{
 	font-family: basic, sans-serif;
@@ -41,6 +55,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	font-size: 5vh;
 }
 
+/* profile pic */
 #modal #pfp{
 	border-radius:50%;
 	background-color:gray;
@@ -51,6 +66,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	bottom: 3vh;
 }
 
+/*the pencil icon thing*/
 #modal #editpfp{
 	text-align: center;
 	display: inline-block;
@@ -83,15 +99,18 @@ input:focus{
   width: 60%;
 }
 
+/*text area in stepThree*/
 #otherInfo{
 	border-color: rgb(100,100,100);
 	margin-top: 0.7em;
-	height: 20vh;
+	height: 37vh;
 	width: 80%;
 	font-size: 3vh;
 	padding: 0.5em;
 	border-radius: 5%;
 }
+
+/* gender */
 .sex{
 	border-radius: 5%;
 	background-color: rgb(220,220,220);
@@ -104,17 +123,17 @@ input:focus{
 	display: inline-block;
 }
 
+/* the three dots on the bottom */
 #placementDots{
 	position: fixed;
 	bottom: 13vh;
 	left: 44vw;
-
 	display: block;
 	text-align: center;
-
 }
-.dot{
 
+/*individual dot*/
+.dot{
 	display: inline-block;
 	border-radius: 50%;
 	background-color:rgb(180,180,180);
@@ -122,14 +141,23 @@ input:focus{
 	width: 1vh;
 	margin:0 .5em 0 .5em;
 }
-
-#heading{
-	text-align: center;
-	font-size: 5em;
-	padding: 2%;
-	position: relative;
-	background-color: #f0f0f0;
+#submitBtn{
+  margin: 2em auto 1em auto;
+  color:white;
+  background-color:#535e61;
+  width: 20vw;
+  font-size: 5vw;
+  padding: 0.8em 2.5em 0.8em 2.5em;
+  border-radius:4%;
+  transition-duration: 0.2s;
+  box-shadow: 0px 15px 26px 2px rgba(0,0,0,0.3);
 }
+#submitBtn:active{
+  background-color: #333b3d;
+  transform:translateY(0.2vh);
+
+}
+/* end of modal stuff */
 #border{
 	border-bottom: solid 2px #dddddd;
 	width: 90%;
@@ -178,8 +206,4 @@ input:focus{
 	position: relative;
 	top: -0.5vh;
 	color: #575757;
-}
-#navbar{
-	height:10vh;
-	background-color: #d1d13c;
 }
