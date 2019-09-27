@@ -11,6 +11,8 @@
 	</div>
 	<div id="modal">
 		<h3>ADD REPORT</h3>
+		<img id="leftArrow" style="display:none;top:37vh;height:7vh;width: auto;position: absolute;opacity:0.5"src="assets/pointLeft.svg" />
+		<img id="rightArrow" style="top:37vh;right:0;height:7vh;width: auto;position: absolute;opacity:0.5"src="assets/pointRight.svg" />
 
 		<div id="stepOne">
 			<div id="editpfp">
@@ -26,18 +28,29 @@
 			</div>
 		</div>
 		<div id="stepTwo">
+
+			<div class="sex">
+				<img style="height:80%;width:auto;"src="/assets/male.png" />
+			</div>
+			<div class="sex" style="background-color:rgb(255,255,255)">
+				<img style="height:80%;width:auto;"src="/assets/female.png" />
+			</div>
 			<p style="font-size:3.3vh;margin-top:0.7em">
 				date last seen:
 			</p>
 			<input style="width:50%;"type="date" />
-				<div class="sex">
-					<img style="height:80%;width:auto;"src="/assets/male.png" />
-				</div>
-				<div class="sex" style="background-color:rgb(255,255,255)">
-					<img style="height:80%;width:auto;"src="/assets/female.png" />
-			</div>
+			<p style="font-size:3.3vh;margin-top:0.7em;margin-bottom:0.1em;">
+				location last seen:
+			</p>
+			<input placeholder="address, zip code" style="margin-bottom:0;width:50%;"type="text" />
+			<input placeholder="country"style="width:50%;"type="text" />
 
+		</div>
+		<div id="stepThree">
 			<textarea id="otherInfo" placeholder="other information..."></textarea>
+			<div id="submitBtn">
+				submit
+			</div>
 		</div>
 		<div id="placementDots">
 			<div class="dot">
