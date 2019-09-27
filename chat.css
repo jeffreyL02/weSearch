@@ -44,28 +44,25 @@ html, body {
 	width: 8%;
 	display: inline-block;
 	position: relative;
-	top:2vh;
+	margin: 5%;
 }
 .text{
 	display: inline-block;
-	width: 70%;
-	background-color: #777777;
-	border-radius: 15%;
+	width: 65%;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 15px 15px 15px 15px;
 	padding:5%;
 	font-size: 2.5em;
 }
 .messageRev{
-	margin: 0;
+	margin: 5%;
 	position: relative;
 	left: 0;
 	width: 85%;
-	margin-left: 3vw;
-	margin-top: 3%;
 	box-sizing: border-box;
 }
 .messageSen{
-	margin: 5% 0 0 2.5%;
-	margin-top: 3%;
+	margin: 5%;
 	position: relative;
 	right: 0;
 	box-sizing: border-box;
@@ -91,7 +88,7 @@ html, body {
 	bottom: 1vh;
 	height: 4vh;
 	width: 68vw;
-	border-radius: 10%;
+	border-radius: 5px 5px 5px 5px;
 	outline:none;
 	margin-left: 4vw;
 	font-size: 4em;
