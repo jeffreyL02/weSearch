@@ -1,3 +1,7 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 *{
   margin:0;
   border:0;
@@ -5,8 +9,9 @@
 
 #header{
 	background-color: #555555;
-	position: sticky;
+	position: fixed;
 	height: 10vh;
+	width: 100%;
 	top: 0;
 	z-index: 100;
 }
@@ -33,32 +38,73 @@
 	margin-top: 2.5%;
 	margin-left: 2.5%;
 }
-
-#pfp{
-	border-radius: 50%;
-	width: 12.5%;
+.text{
 	display: inline-block;
+	width: 65%;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 15px 15px 15px 15px;
+	padding:5%;
+	font-size: 2.5em;
 }
-#text{
-	display: inline-block;
-	width: 50%;
-	background-color: #777777;
-	border-radius: 15%;
-	padding:3%;
-	margin-left: 2.5%;
-	margin-right: 2.5%;
-	font-size: 02em;
-}
-#messageRev{
-	margin: 5% 0 0 2.5%;
+.messageRev{
+	margin: 5%;
 	position: relative;
 	left: 0;
+	width: 85%;
+	box-sizing: border-box;
 }
-#messageSen{
-	margin: 5% 0 0 2.5%;
+.messageSen{
+	margin: 5%;
 	position: relative;
-	right: -22.5%;
+	right: 0;
+	box-sizing: border-box;
+	width: 85%;
+	left: 26%;
 }
-#qwer{
-	height:20%;
+#inputContainer{
+	position: fixed;
+	bottom: 0;
+	width:100vw;
+	height: 6.5vh;
+	background-color: #aaaaaa
+}
+#image{
+	height: 5vh;
+	margin-top: 0.75vh;
+	margin-left: 4vw;
+	display: inline-block;
+}
+#inputMessage{
+	display: inline-block;
+	position: relative;
+	bottom: 1vh;
+	height: 4vh;
+	width: 68vw;
+	border-radius: 5px 5px 5px 5px;
+	outline:none;
+	margin-left: 4vw;
+	font-size: 4em;
+	background-color: #eeeeee;
+}
+#filler{
+	position: absolute;
+	height: 7.5vh;
+	width: 100vw;
+}
+#fillerTwo{
+	height: 10vh;
+	width: 100vw;
+	z-index: -1000;
+}
+#send{
+	display: inline-block;
+	width: 7vw;
+	margin-left: 4.5vw;
+	margin-bottom: 0.5vh;
+	transform: rotate(180deg);
+}
+#senderName{
+	font-size: 2.5em;
+	margin-left: 2vw;
+	color: #888;
 }

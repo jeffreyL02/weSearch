@@ -1,6 +1,12 @@
 {
   "rules": {
-    ".read": true,
-    ".write": true
-  }
+    "tracker": {
+      "$positions": {
+        ".write": true
+      },
+      ".read": true,
+    },
+    ".read": "auth != null",
+    ".write": "auth != null"
+  },
 }
