@@ -45,6 +45,7 @@ html, body {
 	border-radius: 15px 15px 15px 15px;
 	padding: 2%;
 	font-size: 2.5em;
+	overflow-wrap: break-word;
 }
 .messageIncoming{
 	margin: 5%;
@@ -113,4 +114,7 @@ html, body {
 
 #workspace {
 	padding-top: 3%;
+	overflow: scroll;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
