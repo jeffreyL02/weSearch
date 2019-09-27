@@ -38,14 +38,6 @@ html, body {
 	margin-top: 2.5%;
 	margin-left: 2.5%;
 }
-
-.pfp{
-	border-radius: 50%;
-	width: 8%;
-	display: inline-block;
-	position: relative;
-	margin: 5%;
-}
 .text{
 	display: inline-block;
 	width: 65%;
@@ -67,7 +59,7 @@ html, body {
 	right: 0;
 	box-sizing: border-box;
 	width: 85%;
-	right: -20%;
+	left: 26%;
 }
 #inputContainer{
 	position: fixed;
@@ -110,4 +102,9 @@ html, body {
 	margin-left: 4.5vw;
 	margin-bottom: 0.5vh;
 	transform: rotate(180deg);
+}
+#senderName{
+	font-size: 2.5em;
+	margin-left: 2vw;
+	color: #888;
 }
