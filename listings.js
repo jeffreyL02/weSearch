@@ -47,3 +47,16 @@ left.addEventListener("click",function(){
       right.style.display="inline-block";
   }
 });
+
+//g e n d e r
+let male = document.getElementById("male");
+let female = document.getElementById("female");
+
+female.addEventListener("click",function(){
+  male.style.backgroundColor="white";
+  female.style.backgroundColor="rgb(220,220,220)"
+});
+male.addEventListener("click",function(){
+  female.style.backgroundColor="white";
+  male.style.backgroundColor="rgb(220,220,220)"
+});
