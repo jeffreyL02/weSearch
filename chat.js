@@ -25,6 +25,11 @@ n.addEventListener('keypress', Event => {
 })
 
 function add(N, M, SELF){
+  if(lastSpeaker == N+''+SELF){
+    f.lastChild.lastChild.innerText += "\n" + M;
+    f.scrollTop = f.scrollHeight;
+    return;
+  }
   const d = document.createElement('div');
   /*d.innerHTML = "<strong>" + N + "</strong>: " + M;*/
 
@@ -39,7 +44,7 @@ function add(N, M, SELF){
     </div> */
 
   d.className = SELF ? "messageOutgoing" : "messageIncoming";
-  d.innerHTML = `${lastSpeaker == N+''+SELF ? "" : `<p class="senderName">${N}</p>`}<div class="text">${M}</div>`;
+  d.innerHTML = `<p class="senderName">${N}</p><div class="text">${M}</div>`;
 
   lastSpeaker = N+''+SELF;
 
