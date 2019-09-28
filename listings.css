@@ -12,16 +12,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
 /* this is modal stuff*/
 /* the black thing that shows up when u open up a modal */
 #black{
+  display: none;
 	position: fixed;
+  top: 0;
 	z-index:3;
-
-	height:900vh;
+	height:100%;
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
 }
 
 /*self-explanatory*/
 #modal{
+  display: none;
 	top:10%;
 	background-color:white;
 	position: fixed;
@@ -169,12 +171,13 @@ input:focus{
 	padding: 2em 2em 2em 3em;
 	border: dashed 5.5px rgb(150,150,150);
 	width:70%;
-	margin:0 auto 1vh auto;
+	margin:5vh auto 1vh auto;
 }
 #addPerson img{
 	display: inline-block;
 	height:3vh;
 	opacity:0.5;
+  margin-right: 1.5vh;
 }
 #addPersonInfo{
 	color:rgb(120,120,120);
