@@ -106,7 +106,7 @@ input:focus{
 	border-color: rgb(100,100,100);
 	margin-top: 0.7em;
 	height: 37vh;
-	width: 80%;
+	width: 65%;
 	font-size: 3vh;
 	padding: 0.5em;
 	border-radius: 5%;
@@ -114,6 +114,7 @@ input:focus{
 
 /* gender */
 .sex{
+  transition: background-color 0.1s ease-in;
 	border-radius: 5%;
 	background-color: rgb(220,220,220);
 	margin-top: 7%;
