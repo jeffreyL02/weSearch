@@ -2,6 +2,18 @@
   width: 100%;
 }
 #reportName{
+  font-size: 8em;
   text-align: center;
-  font-size: 7em;
+}
+.title{
+  font-size: 5em;
+  padding-left: 0.75em;
+}
+.info{
+  font-size: 3em;
+}
+.border{
+  border-bottom: solid #888 3px;
+  width: 80%;
+  margin-left: 10%;
 }

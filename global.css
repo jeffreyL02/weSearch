@@ -59,3 +59,29 @@
   margin-top: 2.5vh;
   margin-left: 3vw;
 }
+#header{
+  background-color: #555555;
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+#logo{
+  position: absolute;
+  left: 27.5%;
+  font-size: 700%;
+}
+
+#backbtn{
+  height: 65%;
+  position: absolute;
+  left: 0;
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+}
+#fillerTwo{
+  height: 10vh;
+  width: 100vw;
+  z-index: -1000;
+}
