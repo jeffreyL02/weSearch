@@ -173,7 +173,7 @@ input:focus{
 }
 
 /* end of modal stuff */
-#border{
+.border{
 	border-bottom: solid 2px #dddddd;
 	width: 90%;
 	position: relative;
@@ -206,18 +206,21 @@ input:focus{
 	position: relative;
 	left: 0;
 }
-#info{
+.info{
 	width: 75%;
 	position: absolute;
 	right: 0;
 	display: inline-block;
 	margin-top: 6%;
 }
-#personName{
-	display: block;
+.personName{
+	display: relative;
+	white-space: nowrap;
+	overflow-x: scroll;
 	font-size: 6em;
 }
-#personDate{
+.personName::-webkit-scrollbar { width: 0 !important }
+.personDate{
 	font-size: 2.05em;
 	position: relative;
 	top: -0.5vh;

@@ -100,11 +100,11 @@ DB.ref('/listings').on('value', snapshot => {
     const P = v[k]; // P erson
     workspace.innerHTML += `<div class="person">
       <img src="assets/defaultIcon.png">
-      <div id="info">
-        <p id="personName">${P.forename} ${P.surname}</p>
-        <p id="personDate">Date Last Seen: ${P.lastSeen || "Unknown"}</p>
+      <div class="info">
+        <p class="personName">${P.forename} ${P.surname}</p>
+        <p class="personDate">Date Last Seen: ${P.lastSeen || "Unknown"}</p>
       </div>
-      <div id="border"></div>
+      <div class="border"></div>
     </div>`;
   }
 })
