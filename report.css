@@ -5,12 +5,16 @@
   font-size: 8em;
   text-align: center;
 }
+.container{
+  
+}
 .title{
   font-size: 5em;
-  padding-left: 0.75em;
+  padding-left: 0.5em;
 }
 .info{
   font-size: 3em;
+  padding-left: 0.5em;
 }
 .border{
   border-bottom: solid #888 3px;

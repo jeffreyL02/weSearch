@@ -25,12 +25,6 @@ html, body {
 
 }
 
-#logo{
-	position: absolute;
-	left: 27.5%;
-	font-size: 700%;
-}
-
 #backbtn{
 	height: 65%;
 	position: absolute;
@@ -92,11 +86,6 @@ html, body {
 	position: absolute;
 	height: 7.5vh;
 	width: 100vw;
-}
-#fillerTwo{
-	height: 10vh;
-	width: 100vw;
-	z-index: -1000;
 }
 #send{
 	display: inline-block;
