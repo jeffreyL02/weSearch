@@ -33,8 +33,10 @@ html, body {
 	margin-left: 2.5%;
 }
 .text{
+  margin: 0.8% 0.3%;
 	display: inline-block;
-	width: 65%;
+  min-width: 5%;
+	max-width: 55%;
 	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 15px 15px 15px 15px;
 	padding: 2%;
@@ -45,41 +47,40 @@ html, body {
 	margin: 5%;
 	position: relative;
 	left: 0;
-	width: 110%;
 	box-sizing: border-box;
 }
 .messageOutgoing{
+  text-align: right;
 	margin: 5%;
 	position: relative;
-	right: 0;
 	box-sizing: border-box;
-	width: 110%;
-	left: 15%;
+	left: 0;
 }
 #inputContainer{
 	position: fixed;
 	bottom: 0;
 	width:100vw;
-	height: 6.5vh;
-	background-color: #aaaaaa
+	height: 7.8vh;
+	background-color: rgb(200,200,200)
 }
 #image{
 	height: 5vh;
-	margin-top: 0.75vh;
+	margin-top: 1.7vh;
 	margin-left: 4vw;
 	display: inline-block;
 }
 #inputMessage{
+  padding: 0.3% 2%;
 	display: inline-block;
 	position: relative;
-	bottom: 1vh;
-	height: 4vh;
-	width: 68vw;
+	bottom: 1.8vh;
+	height: 5vh;
+	width: 66vw;
 	border-radius: 5px 5px 5px 5px;
 	outline:none;
 	margin-left: 4vw;
-	font-size: 4em;
-	background-color: #eeeeee;
+	font-size: 3em;
+	background-color: rgb(250,250,250);
 }
 #filler{
 	position: absolute;
@@ -89,14 +90,14 @@ html, body {
 #send{
 	display: inline-block;
 	width: 7vw;
-	margin-left: 4.5vw;
-	margin-bottom: 0.5vh;
+	margin-left: 3vw;
+	margin-bottom: 0.8vh;
 	transform: rotate(180deg);
 }
 .senderName{
 	font-size: 2.5em;
 	margin-left: 2vw;
-	color: rgba(0, 0, 0, 0.3);
+	color: rgba(0, 0, 0, 0.7);
 	/*position: absolute;
 	bottom: 100%;*/
 }
