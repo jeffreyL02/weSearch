@@ -12,9 +12,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 /* this is modal stuff*/
 /* the black thing that shows up when u open up a modal */
 #black{
-  display: none;
 	position: fixed;
-  top: 0;
+  	top: 0;
 	z-index:3;
 	height:100%;
 	width:100%;
@@ -23,7 +22,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 /*self-explanatory*/
 #modal{
-  display: none;
 	top:10%;
 	background-color:white;
 	position: fixed;
@@ -34,6 +32,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	height:80%;
 	width:80%;
 	border-radius: 2vh;
+}
+/* modal transitions */
+.hide {
+	display: none;
+	opacity: 0;
+	transition: all 0.25s ease-in-out;
+}
+.show {
+	display: block;
+	opacity: 1;
+	transition: all 0.25s ease-in-out;
 }
 
 #stepOne{
@@ -114,7 +123,7 @@ input:focus{
 
 /* gender */
 .sex{
-  transition: background-color 0.1s ease-in;
+ 	transition: background-color 0.2s ease-in;
 	border-radius: 5%;
 	background-color: rgb(220,220,220);
 	margin-top: 7%;
@@ -148,7 +157,7 @@ input:focus{
   margin: 2em auto 1em auto;
   color:white;
   background-color:#535e61;
-  width: 20vw;
+  /* width: 20vw; */
   font-size: 5vw;
   padding: 0.8em 2.5em 0.8em 2.5em;
   border-radius:4%;
@@ -158,8 +167,11 @@ input:focus{
 #submitBtn:active{
   background-color: #333b3d;
   transform:translateY(0.2vh);
-
 }
+#submitBtn:disabled {
+	opacity: 0.4;
+}
+
 /* end of modal stuff */
 #border{
 	border-bottom: solid 2px #dddddd;

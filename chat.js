@@ -14,7 +14,7 @@ const n = document.getElementById('inputMessage');
 let lastSpeaker = '';
 n.addEventListener('keypress', Event => {
   if(Event.key == 'Enter' && n.value){
-    add(uName || "You", n.value, true);
+    add(/*uName || */"You", n.value, true);
     DB.ref('/chat').push({
       author: uName,
       content: n.value,
