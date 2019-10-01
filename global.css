@@ -20,7 +20,7 @@
   font-weight:bold;
   src: url(https://cdn.glitch.com/1e82efbe-513c-4b39-abf6-1269231807b0%2Fdidactgothic-regular.otf?v=1565736470209)
 }
-
+/*
 #mainNav{
   z-index:5;
   height: 12vh;
@@ -59,8 +59,9 @@
   margin-top: 2.5vh;
   margin-left: 3vw;
 }
+*/
 #header{
-  background-color: #555555;
+  background-color: rgb(205,203,210);
   position: fixed;
   height: 10vh;
   width: 100%;
