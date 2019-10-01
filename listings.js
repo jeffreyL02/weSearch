@@ -22,35 +22,28 @@ let stepOne = document.getElementById("stepOne");
 let stepTwo = document.getElementById("stepTwo");
 let stepThree = document.getElementById("stepThree");
 
-right.addEventListener("click", function(){
-  page++;
-  switch(page){
-    case 2:
-      left.style.display="inline-block";
-      stepOne.style.display="none";
-      stepTwo.style.display="block";
-      break;
-    case 3:
-      stepTwo.style.display="none";
-      stepThree.style.display="block";
-      right.style.display="none";
-  }
-});
-left.addEventListener("click",function(){
-  page--;
-  console.log(page);
+right.addEventListener("click", () => updateModalState(++ page));
+left.addEventListener("click", () => updateModalState(-- page));
+
+function updateModalState(pg){
+  page = pg;
   switch(page){
     case 1:
-      stepOne.style.display="block";
-      stepTwo.style.display="none";
-      left.style.display="none";
+      stepOne.style.display = "block";
+      left.style.display = stepTwo.style.display = stepThree.style.display = "none";
+      right.style.display = "inline-block";
       break;
     case 2:
-      stepTwo.style.display="block";
-      stepThree.style.display="none";
-      right.style.display="inline-block";
+      stepTwo.style.display = "block";
+      stepOne.style.display = stepThree.style.display = "none";
+      left.style.display = right.style.display = "inline-block";
+      break;
+    case 3:
+      stepThree.style.display = "block";
+      right.style.display = stepTwo.style.display = stepOne.style.display = "none";
+      left.style.display = "inline-block";
   }
-});
+}
 
 //g e n d e r
 let male = document.getElementById("male");
@@ -68,6 +61,21 @@ male.addEventListener("click",function(){
 const I = document.getElementsByTagName('input'); // I nput
 const t = document.getElementById("submitBtn"); // t rigger
 t.addEventListener('click', function(){
+  if(!I[0].value){
+    updateModalState(1);
+    I[0].focus();
+    return;
+  }
+  if(!I[0].value){
+    updateModalState(1);
+    I[0].focus();
+    return;
+  }
+  if(!I[3].value){
+    updateModalState(2);
+    I[3].focus();
+    return;
+  }
   DB.ref('/listings').push({
     forename: I[0].value,
     surname:  I[1].value,
