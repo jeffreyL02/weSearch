@@ -61,28 +61,26 @@
 }
 */
 #header{
-  background-color: rgb(205,203,210);
+  background-image: linear-gradient(#d8d8d8 10%, #f0f0f0);
   position: fixed;
   height: 10vh;
   width: 100%;
   top: 0;
   z-index: 100;
+  border-bottom: solid #eee 2px;
+  box-shadow: 0px 26px 43px -17px rgba(0,0,0,0.2);
 }
 #navLogo{
+  font-family: basic, sans-serif;
   position: absolute;
-  left: 27.5%;
-  font-size: 700%;
-}
-
-#backbtn{
-  height: 65%;
-  position: absolute;
-  left: 0;
-  margin-top: 2.5%;
-  margin-left: 2.5%;
+  margin-top: 2.7vh;
+  margin-left: 23vw;
+  font-size: 600%;
 }
 #fillerTwo{
   height: 10vh;
   width: 100vw;
   z-index: -1000;
+  position: absolute;
+  top:0;
 }
