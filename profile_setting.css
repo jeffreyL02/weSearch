@@ -33,6 +33,7 @@ input:focus{
   width: 60%;
 }
 
+/*the gray box behind all the content */
 #box{
   color:black;
   display:inline-block;
@@ -45,9 +46,12 @@ input:focus{
   left:4.9vw;
   border-radius:5% 5% 0 0;
 }
+
+/*stuff inside box*/
 #content{
   padding:4em;
 }
+
 #pfp{
   display: block;
   z-index: 2;
@@ -57,11 +61,26 @@ input:focus{
   border-radius: 50%;
 }
 
+/*the edit pencil icon*/
 #edit{
   width: 6vw;
   height:auto;
 }
 
+#editName{
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  z-index: 9;
+  top: 27.7vh;
+  right: 28vw;
+  height: 8vh;
+  width: 8vh;
+  background-color: rgba(200,200,200,0.6);
+  border-radius: 50%;
+}
+
+/*report submitted*/
 .collapsible{
   background-color: transparent;
   color:black;
@@ -92,12 +111,12 @@ input:focus{
 
 .content{
   overflow: scroll;
-      transition: max-height 0.2s ease-out;
-      max-height: 15vh;
-      background-color: rgba(255,255,255,0.3);
-      font-size: 4.5vw;
-      text-align: left;
-      padding: 1.5vh 3vh 1.5vh 3vh;
+  transition: max-height 0.2s ease-out;
+  max-height: 0px;
+  background-color: rgba(255,255,255,0.3);
+  font-size: 4.5vw;
+  text-align: left;
+  padding: 0 3vh 0 3vh;
 }
 
 .profilepic{
@@ -134,16 +153,4 @@ input:focus{
   border-radius: 4%;
   transition-duration: 0.2s;
   box-shadow: 0px 15px 26px 2px rgba(0,0,0,0.3);
-}
-#editName{
-  text-align: center;
-  display: inline-block;
-  position: absolute;
-  z-index: 9;
-  top: 27.7vh;
-  right: 28vw;
-  height: 8vh;
-  width: 8vh;
-  background-color: rgba(200,200,200,0.6);
-  border-radius: 50%;
 }
