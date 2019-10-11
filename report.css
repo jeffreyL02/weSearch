@@ -1,23 +1,32 @@
 #pic{
-  width: 100%;
+  border-radius: 50%;
+  margin-left: 30vw;
+  margin-top: 5vh;
 }
 #reportName{
-  font-size: 8em;
+  font-size: 5em;
   text-align: center;
+  height: 10vh;
+  color: #444;
+}
+.topBox{
+  display: inline-block;
+  width: 20%;
+  margin: 4%;
+}
+#infoContainer{
+  text-align: center; 
 }
 .container{
-  
+  padding-top:  2vh;
+  padding-bottom: 2vh;
 }
 .title{
-  font-size: 5em;
-  padding-left: 0.5em;
+  font-size: 4em;
+  margin-bottom:  2vh;
+  color:  #353535;
 }
 .info{
-  font-size: 3em;
-  padding-left: 0.5em;
-}
-.border{
-  border-bottom: solid #888 3px;
-  width: 80%;
-  margin-left: 10%;
+  font-size: 2.75em;
+  color:  #666;
 }
