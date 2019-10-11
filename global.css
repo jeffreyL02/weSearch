@@ -1,3 +1,6 @@
+body{
+  width: 100vw;
+}
 *{
   font-family: "Didact Gothic", Times, serif;
   margin: 0;
@@ -63,7 +66,7 @@
   background-color: #555555;
   position: fixed;
   height: 10vh;
-  width: 100%;
+  width: 100vw;
   top: 0;
   z-index: 100;
 }
