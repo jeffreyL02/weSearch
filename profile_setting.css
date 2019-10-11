@@ -11,7 +11,7 @@ h3{
   font-family: basic, Times, serif;
   font-size: 8vw;
   margin-top:8vh;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
 }
 
 input{
@@ -36,7 +36,7 @@ input:focus{
 #box{
   color:black;
   display:inline-block;
-  background-color: #c1cbce;
+  background-image: linear-gradient(#f7f2f2, #d4d7da);
   width: 90vw;
   height: 73vh;
   position: fixed;
@@ -47,15 +47,14 @@ input:focus{
 }
 #content{
   padding:4em;
-  margin-bottom:4em;
 }
 #pfp{
-  display:block;
-  z-index:2;
-  position:fixed;
-  width: 30vw;
-  margin: 33% 0 9% 35vw;
-  border-radius:50%;
+  display: block;
+  z-index: 2;
+  position: fixed;
+  width: 35vw;
+  margin: 28% 0 9% 32%;
+  border-radius: 50%;
 }
 
 #edit{
@@ -64,7 +63,7 @@ input:focus{
 }
 
 .collapsible{
-  background-color: #c1cbce;
+  background-color: transparent;
   color:black;
   cursor: pointer;
   padding: 1em;
@@ -79,7 +78,9 @@ input:focus{
 
 .collapsible:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
+  font-size: 1.3vh;
+  position: relative;
+  bottom: 3.3vh;
   color: white;
   float: right;
   margin-left: 5px;
@@ -90,13 +91,13 @@ input:focus{
 }
 
 .content{
-  overflow:scroll;
-  transition: max-height 0.2s ease-out;
-  max-height: 13vh;
-  background-color:#d9e3e6;
-  font-size:4.5vw;
-  text-align: left;
-  padding: 1.5vh 3vh 1.5vh 3vh;
+  overflow: scroll;
+      transition: max-height 0.2s ease-out;
+      max-height: 15vh;
+      background-color: rgba(255,255,255,0.3);
+      font-size: 4.5vw;
+      text-align: left;
+      padding: 1.5vh 3vh 1.5vh 3vh;
 }
 
 .profilepic{
@@ -106,12 +107,43 @@ input:focus{
 
 .report{
   margin-bottom: 1vh;
-  border-bottom: gray;
+    border-bottom: gray;
+    background-color: #f8f8f9;
+    border-radius: 1.5vh;
+    padding: 2%;
 }
 .report h5{
+  position:relative;
+  bottom:1.5vh;
+  left: 1vh;
   font-size:4vw;
   display: inline-block;
 }
+
 .report img{
   display: inline-block;
+}
+
+#submitBtn{
+  margin: 8% 0 0 29.5%;
+  color: white;
+  background-color: #535e61;
+  width: 20vw;
+  font-size: 5vw;
+  padding: 0.5em 1em 0.7em 1em;
+  border-radius: 4%;
+  transition-duration: 0.2s;
+  box-shadow: 0px 15px 26px 2px rgba(0,0,0,0.3);
+}
+#editName{
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  z-index: 9;
+  top: 27.7vh;
+  right: 28vw;
+  height: 8vh;
+  width: 8vh;
+  background-color: rgba(200,200,200,0.6);
+  border-radius: 50%;
 }

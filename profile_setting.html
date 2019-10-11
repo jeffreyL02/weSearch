@@ -6,15 +6,24 @@
   <script defer src = "profile_setting.js"></script>
 </head>
 <body>
+  <div id="header">
+    <p id="navLogo">WESEARCH</p>
+  </div>
+  <div id="fillerTwo"></div>
+  <div id="editName">
+    <img style="position:relative;top:1.4vh;height:5vh; width:5vh"src="assets/edit.svg"/>
+  </div>
   <img id = "pfp" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png" />
   <div id="box">
     <div id = "content">
       <h3>JEFFREY LIU</h3>
-      <img id = "edit" src="assets/edit.svg" />
       <input id ="usernameInput" value="username" type="text" />
       <input id="emailInput" value="email@gmail.com" type="text" />
+      <div id="submitBtn">save</div>
     </div>
-    <button class="collapsible">reports submitted</button>
+    <button class="collapsible"><p style="position:relative;bottom:1vh;">
+      reports submitted</p>
+    </button>
     <div class="content">
       <div class="report">
         <img class="profilepic" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png" />
@@ -29,12 +38,6 @@
         <h5>Thomas Li</h5>
       </div>
     </div>
-  </div>
-  <div id="mainNav">
-    <img id="menu" src="/assets/menu.svg"/>
-    <p>
-      weSearch
-    </p>
   </div>
 </body>
 </html>
