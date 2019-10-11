@@ -1,13 +1,12 @@
-#pic{
-  border-radius: 50%;
-  margin-left: 30vw;
-  margin-top: 5vh;
-}
+
 #reportName{
-  font-size: 5em;
-  text-align: center;
-  height: 10vh;
-  color: #444;
+    display: inline-block;
+    letter-spacing:0.2em;
+    font-family: basic, Times, serif;
+    font-size: 8vw;
+    margin-top:8vh;
+    margin-bottom: 2vh;
+
 }
 .topBox{
   display: inline-block;
@@ -15,7 +14,7 @@
   margin: 4%;
 }
 #infoContainer{
-  text-align: center; 
+  text-align: center;
 }
 .container{
   padding-top:  2vh;
@@ -29,4 +28,31 @@
 .info{
   font-size: 2.75em;
   color:  #666;
+}
+
+#box{
+  color:black;
+  display:inline-block;
+  background-image: linear-gradient(#f7f2f2, #d4d7da);
+  width: 90vw;
+  height: 73vh;
+  position: fixed;
+  z-index:0;
+  bottom:0;
+  left:4.9vw;
+  border-radius:5% 5% 0 0;
+}
+
+/*stuff inside box*/
+#content{
+  padding:4em;
+}
+
+#pfp{
+  display: block;
+  z-index: 2;
+  position: fixed;
+  width: 35vw;
+  margin: 28% 0 9% 32%;
+  border-radius: 50%;
 }
