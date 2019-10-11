@@ -1,7 +1,7 @@
 body{
   text-align: center;
   display: inline-block;
-  background: linear-gradient(180deg, rgba(226,231,232,1) 0%, rgba(255,255,255,1) 51%, rgb(163, 176, 178) 100%);
+  background: linear-gradient(180deg, var(--light-gray) 0%, rgba(255,255,255,1) 51%, var(--dark-medium-gray) 100%);
   width: 100vw;
   height:100vh;
 }
