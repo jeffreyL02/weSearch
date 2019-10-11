@@ -84,6 +84,4 @@ body{
   height: 10vh;
   width: 100vw;
   z-index: -1000;
-  position: absolute;
-  top:0;
 }
