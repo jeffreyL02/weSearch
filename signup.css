@@ -33,7 +33,7 @@ input:focus{
 }
 
 #signUp{
-  margin: 8% 0 4% 25%;
+  margin: 8% auto 4% auto;
   color:white;
   background-color:#535e61;
   text-align: center;

@@ -84,7 +84,7 @@ t.addEventListener('click', function(){
     location: I[4].value,
     country:  I[5].value,
     gender:   male.style.length > 35,
-    desc:     document.getElementById('otherInfo').innerText   
+    desc:     document.getElementById('otherInfo').innerText
   }).then(() => {
     window.location.reload();
   });
@@ -102,7 +102,7 @@ DB.ref('/listings').on('value', snapshot => {
       <img src="assets/defaultIcon.png">
       <div class="info">
         <p class="personName">${P.forename} ${P.surname}</p>
-        <p class="personDate">Date Last Seen: ${P.lastSeen || "Unknown"}</p>
+        <p class="personDate">date last seen: ${P.lastSeen || "Unknown"}</p>
       </div>
       <div class="border"></div>
     </div>`;
