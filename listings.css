@@ -8,7 +8,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
     display: none;
 	}
+body{
+  height: 100vh;
+}
 
+#workspace{
+  background-image: linear-gradient(white, var(--medium-gray));
+
+}
 /* this is modal stuff*/
 /* the black thing that shows up when u open up a modal */
 #black{
