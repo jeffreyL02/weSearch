@@ -98,7 +98,7 @@ DB.ref('/listings').on('value', snapshot => {
   workspace.innerHTML = "";
   for(let k in v){  // k ey
     const P = v[k]; // P erson
-    workspace.innerHTML += `<div class="person">
+    workspace.innerHTML += `<div class="person" onclick="window.location.href='report.html?id=${k}'">
       <img src="assets/defaultIcon.png">
       <div class="info">
         <p class="personName">${P.forename} ${P.surname}</p>
