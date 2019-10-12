@@ -21,7 +21,7 @@ body{
 #black{
 	position: fixed;
   top: 0;
-	z-index:3;
+	z-index:104;
 	height:100%;
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
@@ -34,7 +34,7 @@ body{
 	position: fixed;
 	left:50%;
 	margin-left:-400px;
-	z-index: 5;
+	z-index: 105;
 	padding:0.5em;
 	height:80%;
 	width:80%;
