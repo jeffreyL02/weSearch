@@ -8,13 +8,20 @@ input[type=date]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
     display: none;
 	}
+body{
+  height: 100vh;
+}
 
+#workspace{
+  background-image: linear-gradient(white, var(--medium-gray));
+
+}
 /* this is modal stuff*/
 /* the black thing that shows up when u open up a modal */
 #black{
 	position: fixed;
   top: 0;
-	z-index:3;
+	z-index:104;
 	height:100%;
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
@@ -27,7 +34,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	position: fixed;
 	left:50%;
 	margin-left:-400px;
-	z-index: 5;
+	z-index: 105;
 	padding:0.5em;
 	height:80%;
 	width:80%;
