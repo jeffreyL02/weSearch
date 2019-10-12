@@ -151,7 +151,7 @@ input:focus{
 #submitBtn{
   margin: 8% 0 0 29.5%;
   color: white;
-  background-color: #535e61;
+  background-color: var(--dark-gray);
   width: 20vw;
   font-size: 5vw;
   padding: 0.5em 1em 0.7em 1em;
