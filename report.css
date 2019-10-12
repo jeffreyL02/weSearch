@@ -1,11 +1,11 @@
 
-#reportName{
-    display: inline-block;
-    letter-spacing:0.2em;
-    font-family: basic, Times, serif;
-    font-size: 8vw;
-    margin-top:8vh;
-    margin-bottom: 2vh;
+h3{
+  display: inline-block;
+  letter-spacing:0.2em;
+  font-family: basic, Times, serif;
+  font-size: 8vw;
+  margin-top:8vh;
+  margin-bottom: 2vh;
 
 }
 .topBox{
@@ -17,7 +17,8 @@
   text-align: center;
 }
 .container{
-  padding-top:  2vh;
+  text-align: left;
+  padding-top:2vh;
   padding-bottom: 2vh;
 }
 .title{
@@ -33,7 +34,7 @@
 #box{
   color:black;
   display:inline-block;
-  background-image: linear-gradient(#f7f2f2, #d4d7da);
+  background-image: linear-gradient(#f7f2f2, var(--medium-gray));
   width: 90vw;
   height: 73vh;
   position: fixed;
@@ -45,6 +46,7 @@
 
 /*stuff inside box*/
 #content{
+  text-align: center;
   padding:4em;
 }
 
