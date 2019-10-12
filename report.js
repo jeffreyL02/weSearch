@@ -1,26 +1,25 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+const sID = window.location.href.split('?id=')[1];
+if(!sID) window.location.href = "listings.html";
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+import {firebaseConfig} from "./init.js"
+firebase.initializeApp(firebaseConfig);
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+document.getElementById('back').addEventListener('click', () => window.location.href = "listings.html");
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+const DB = firebase.database();
+const info = document.getElementsByClassName('info');
+const name = document.getElementById('reportName');
+const content = document.getElementById('content');
+const desc = document.getElementById('reportDesc');
+
+DB.ref('/listings/' + sID).once('value').then(snapshot => {
+  let v = snapshot.val();
+  name.innerText = (v.forename + ' ' + v.surname).toUpperCase();
+  info[0].innerText = v.age;
+  info[1].innerText = ~~(Math.random()*2)+4 + "ft " + ~~(Math.random()*12) + "in";
+  info[2].outerHTML = v.gender ? `<p class="info" id="gender" style="color:#6AF">\u2642</p>` : `<p class="info" id="gender" style="color:#FAA">\u2640</p>`;
+  desc.innerText = v.desc;
+
+  name.style.transformOrigin = "0px 0px";
+  name.style.transform = `scaleX(${Math.min(content.offsetWidth / name.offsetWidth * 0.9, 1)})`;
+});

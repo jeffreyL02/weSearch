@@ -84,7 +84,7 @@ t.addEventListener('click', function(){
     location: I[4].value,
     country:  I[5].value,
     gender:   male.style.length > 35,
-    desc:     document.getElementById('otherInfo').innerText   
+    desc:     document.getElementById('otherInfo').value   
   }).then(() => {
     window.location.reload();
   });
