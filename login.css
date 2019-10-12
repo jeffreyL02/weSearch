@@ -48,9 +48,9 @@ h3{
 }
 
 #login{
-  margin: 4% 0 4% 25%;
+  margin: 4% auto 4% auto;
   color:white;
-  background-color:#535e61;
+  background-color:var(--dark-gray);
   text-align: center;
   width: 20vw;
   font-size: 5vw;
@@ -61,7 +61,7 @@ h3{
 }
 
 #login:active{
-  background-color: #333b3d;
+  background-color: #535e61;
   transform:translateY(0.2vh);
 
 }
