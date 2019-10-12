@@ -48,3 +48,9 @@ body{
   position: absolute;
   top: 0;
 }
+#profileBtn{
+  position: absolute;
+  right:0;
+  height: 70%;
+  margin: 2.5%;
+}
