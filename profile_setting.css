@@ -35,6 +35,7 @@ input:focus{
 
 /*the gray box behind all the content */
 #box{
+  overflow-y:auto;
   color:black;
   display:inline-block;
   background-image: linear-gradient(#f7f2f2, var(--medium-gray));
@@ -42,7 +43,7 @@ input:focus{
   height: 73vh;
   position: fixed;
   z-index:0;
-  bottom:0;
+  top:27vh;
   left:4.9vw;
   border-radius:5% 5% 0 0;
 }
