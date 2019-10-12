@@ -1,4 +1,6 @@
 body{
+  overflow-y:auto;
+
   text-align: center;
   display: inline-block;
   width: 100vw;
@@ -35,13 +37,12 @@ input:focus{
 
 /*the gray box behind all the content */
 #box{
-  overflow-y:auto;
   color:black;
   display:inline-block;
   background-image: linear-gradient(#f7f2f2, var(--medium-gray));
   width: 90vw;
   height: 73vh;
-  position: fixed;
+  position: absolute;
   z-index:0;
   top:27vh;
   left:4.9vw;
@@ -56,7 +57,7 @@ input:focus{
 #pfp{
   display: block;
   z-index: 2;
-  position: fixed;
+  position: absolute;
   width: 35vw;
   margin: 28% 0 9% 32%;
   border-radius: 50%;
