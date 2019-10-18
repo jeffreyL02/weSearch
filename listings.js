@@ -21,6 +21,7 @@ let right=document.getElementById("rightArrow");
 let stepOne = document.getElementById("stepOne");
 let stepTwo = document.getElementById("stepTwo");
 let stepThree = document.getElementById("stepThree");
+let dots = document.getElementsByClassName("dot");
 
 right.addEventListener("click", () => updateModalState(++ page));
 left.addEventListener("click", () => updateModalState(-- page));
@@ -32,16 +33,23 @@ function updateModalState(pg){
       stepOne.style.display = "block";
       left.style.display = stepTwo.style.display = stepThree.style.display = "none";
       right.style.display = "inline-block";
+      dots[0].style.backgroundColor = "rgb(83, 83, 83)";
+      dots[1].style.backgroundColor = "rgb(180, 180, 180)";
       break;
     case 2:
       stepTwo.style.display = "block";
       stepOne.style.display = stepThree.style.display = "none";
       left.style.display = right.style.display = "inline-block";
+      dots[1].style.backgroundColor = "rgb(83, 83, 83)";
+      dots[0].style.backgroundColor = "rgb(180, 180, 180)";
+      dots[2].style.backgroundColor = "rgb(180, 180, 180)";
       break;
     case 3:
       stepThree.style.display = "block";
       right.style.display = stepTwo.style.display = stepOne.style.display = "none";
       left.style.display = "inline-block";
+      dots[1].style.backgroundColor = "rgb(180, 180, 180)";
+      dots[2].style.backgroundColor = "rgb(83, 83, 83)";
   }
 }
 
