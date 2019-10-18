@@ -10,7 +10,7 @@ body{
   -ms-user-select: initial; /* Internet Explorer/Edge */
   user-select: initial; /* Non-prefixed version, currently supported by Chrome and Opera */
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  --dark-gray: #535e61;
+  --dark-gray: #3d4141;
   --dark-medium-gray:rgb(163, 176, 178);
   --medium-gray:#c6d1d3;
   --light-gray:rgb(226,231,232);
