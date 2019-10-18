@@ -17,7 +17,8 @@ DB.ref('/listings/' + sID).once('value').then(snapshot => {
   name.innerText = (v.forename + ' ' + v.surname).toUpperCase();
   info[0].innerText = v.age;
   info[1].innerText = ~~(Math.random()*2)+4 + "ft " + ~~(Math.random()*12) + "in";
-  info[2].outerHTML = v.gender ? `<p class="info" id="gender" style="color:#6AF">\u2642</p>` : `<p class="info" id="gender" style="color:#FAA">\u2640</p>`;
+  //info[2].outerHTML = v.gender ? `<p class="info" id="gender" style="color:#00F">\u2642</p>` : `<p class="info" id="gender" style="color:#F66">\u2640</p>`;
+  info[2].outerHTML = v.gender ? `<p class="info" id="gender">M</p>` : `<p class="info" id="gender">F</p>`;
   desc.innerText = v.desc;
 
   name.style.transformOrigin = "0px 0px";
