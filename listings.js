@@ -2,6 +2,7 @@ import {firebaseConfig} from "./init.js"
 firebase.initializeApp(firebaseConfig);
 
 const DB = firebase.database();
+const AUTH = firebase.auth();
 
 //pop up modal
 let black=document.getElementById("black");
@@ -91,8 +92,9 @@ t.addEventListener('click', function(){
     lastSeen: I[3].value,
     location: I[4].value,
     country:  I[5].value,
-    gender:   male.style.length > 35,
-    desc:     document.getElementById('otherInfo').value
+    gender:   male.outerHTML.length > 146,
+    desc:     document.getElementById('otherInfo').value,
+    author:   AUTH.currentUser.uid || "N/A"
   }).then(() => {
     window.location.reload();
   });

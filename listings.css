@@ -13,7 +13,7 @@ body{
 }
 
 #workspace{
-  background-image: linear-gradient(white, var(--medium-gray));
+  background-image: linear-gradient(white, var(--lesser-gradient));
 
 }
 /* this is modal stuff*/
