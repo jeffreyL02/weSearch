@@ -14,6 +14,7 @@ body{
   --dark-medium-gray:rgb(163, 176, 178);
   --medium-gray:#c6d1d3;
   --light-gray:rgb(226,231,232);
+  --lesser-gradient:#e9eeee;
   --off-white:#f5f9fa;
 }
 
@@ -30,7 +31,7 @@ body{
 }
 
 #header{
-  background-image: linear-gradient(var(--light-gray) 10%, var(--off-white));
+  background-image: linear-gradient(var(--lesser-gradient) 10%, var(--off-white));
   position: fixed;
   height: 10vh;
   width: 100vw;
