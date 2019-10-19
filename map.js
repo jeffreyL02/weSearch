@@ -40,7 +40,7 @@ var tL = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?acces
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 	maxZoom: 18,
 	id: 'mapbox.streets',
-	accessToken: 'pk.eyJ1Ijoibm92YXNhZ2l0dGFyaWkiLCJhIjoiY2sxeHlwYmxvMGhzMjNkczU1MW8ybTd3eSJ9.g5T9MrZ3xbfz6sJ3Ft0-yA'
+	accessToken: 'pk.eyJ1Ijoibm92YXNhZ2l0dGFyaWkiLCJhIjoiY2sxbXEwbW5xMDNkcDNicWI2bmUyaWcxeSJ9.bZbAhftOh_Y9lfLMLpJVCQ'
 });
 tL.addTo(map);
 
