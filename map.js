@@ -104,6 +104,12 @@ DB.ref("/tracker").on("value", snapshot => {
     let d = v[k]; // data
     if (k == uID) continue; // self
     if (Date.now() - d.t > 60 * 1000) continue; // 1 minute
+    L.circle([d.y, d.x], {
+      stroke: false,
+      fillOpacity: 0.1,
+      fillColor: '#ffaa00',
+      radius: 15
+    }).addTo(map);
     if (o[k]){
       o[k].setLatLng([d.y, d.x]);
     }else{
