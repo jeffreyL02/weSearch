@@ -40,7 +40,8 @@ input:focus{
   display:inline-block;
   background-image: linear-gradient(#f7f2f2, var(--medium-gray));
   width: 90vw;
-  height: 72.8vh;
+  min-height: 72.8vh;
+  max-height: auto;
   position: absolute;
   z-index:0;
   top:27vh;
