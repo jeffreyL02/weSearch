@@ -16,6 +16,6 @@ for (let i = 0; i < coll.length; i++) {
         box.style.height="auto";
         content.style.padding= "1.5vh 3vh 1.5vh 3vh";
         body.style.overflowY="auto";
-      }
+    }
   });
 }
