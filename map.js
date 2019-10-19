@@ -7,24 +7,6 @@ const AUTH = firebase.auth();
 if (!navigator.geolocation) alert("this doesnt actually work on your phone ;;");
 
 let run, uID;
-firebase.auth().onAuthStateChanged(function(user) {
-  if(!user) return;
-  if(run) return;
-  run = true;
-  uID = AUTH.currentUser.uid;
-  try {
-    if (navigator.permissions) {
-      navigator.permissions
-        .query({ name: "geolocation" })
-        .then(FETCHLOCATION)
-        //.catch(e => alert(e));
-    } else {
-      FETCHLOCATION({ state: "forced" });
-    }
-  } catch (err) {
-    alert(err);
-  }
-});
 
 var map = L.map('map').setView([0, 0], 1);
 
@@ -54,18 +36,34 @@ var SELF = L.marker([0, 0]).addTo(map)
     //.openPopup()
     .setIcon(ICON_SELF);
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+var tL = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 	maxZoom: 18,
 	id: 'mapbox.streets',
-	accessToken: 'pk.eyJ1Ijoibm92YXNhZ2l0dGFyaWkiLCJhIjoiY2sxbXEwbW5xMDNkcDNicWI2bmUyaWcxeSJ9.bZbAhftOh_Y9lfLMLpJVCQ'
-}).addTo(map);
-
+	accessToken: 'pk.eyJ1Ijoibm92YXNhZ2l0dGFyaWkiLCJhIjoiY2sxeHlwYmxvMGhzMjNkczU1MW8ybTd3eSJ9.g5T9MrZ3xbfz6sJ3Ft0-yA'
+});
+tL.addTo(map);
 
 const FETCHLOCATION = async result => {
   //alert(result.state);
   if (!navigator.geolocation) return alert("not support!!ed");
   try {
+
+    DB.ref("/heatmap").once('value').then(e => {
+      const N = Date.now();
+      const dv = e.val();
+      for(let k in dv){
+        const v = dv[k];
+        const _x = (N - v.t)/4000;
+        console.log(_x, (32 - (Math.pow(_x, 3)>>16) - (_x>>4))/128);
+        L.circle([v.y, v.x], {
+          stroke: false,
+          fillOpacity: (32 - (Math.pow(_x, 3)>>16) - (_x>>4))/512,
+          fillColor: '#ff0000',
+          radius: _x
+        }).addTo(map);
+      }
+    });
 
     navigator.geolocation.getCurrentPosition(position => map.flyTo([position.coords.latitude, position.coords.longitude], 13));
 
@@ -76,11 +74,18 @@ const FETCHLOCATION = async result => {
         const v = d.val();
         const uName = v.forename + ' ' + v.surname;
         if (shareLocation) {
+          console.log("Logging...");
           DB.ref("/tracker/" + uID).set({
             x: position.coords.longitude,
             y: position.coords.latitude,
             t: Date.now(),
             u: uName
+          });
+          DB.ref("/heatmap").push({
+            x: position.coords.longitude,
+            y: position.coords.latitude,
+            t: Date.now(),
+            u: uID
           });
         }
       });
@@ -108,5 +113,24 @@ DB.ref("/tracker").on("value", snapshot => {
         .setIcon(`<center>${ICON_OTHERS}</center>`)
         .setOpacity(0.5);
     }
+  }
+});
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if(!user) return;
+  if(run) return;
+  run = true;
+  uID = AUTH.currentUser.uid;
+  try {
+    if (navigator.permissions) {
+      navigator.permissions
+        .query({ name: "geolocation" })
+        .then(FETCHLOCATION)
+        //.catch(e => alert(e));
+    } else {
+      FETCHLOCATION({ state: "forced" });
+    }
+  } catch (err) {
+    alert(err);
   }
 });
