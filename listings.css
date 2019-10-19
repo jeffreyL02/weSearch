@@ -227,11 +227,11 @@ input:focus{
 	display: relative;
 	white-space: nowrap;
 	overflow-x: scroll;
-	font-size: 6em;
+	font-size: 5.8em;
 }
 .personName::-webkit-scrollbar { width: 0 !important }
 .personDate{
-	font-size: 2.05em;
+	font-size: 2.5em;
 	position: relative;
 	top: -0.5vh;
 	color: #575757;
