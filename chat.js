@@ -78,7 +78,7 @@ DB.ref('/chat').on('value', snapshot => {
   const v = snapshot.val(); // value
   console.log(v);
   for(let k in v){
-    if(!v[k] || v[k].author == uName) continue;
+    if(!v[k] || v[k].author == (uName || "John Doe")) continue;
     if(v[k].timestamp > time){
       add(v[k].author, v[k].content, false);
     }
