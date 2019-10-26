@@ -236,11 +236,3 @@ input:focus{
 	top: -0.5vh;
 	color: #575757;
 }
-#toggle{
-	height: 55%;
-	position: absolute;
-	margin:4%;
-}
-#searchMode{
-	display: none;
-}
