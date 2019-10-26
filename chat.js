@@ -9,6 +9,9 @@ const f = document.getElementById('workspace');
   //add(~~(Math.random()*names.length), Math.random().toString(36).substr(2));
 });*/
 
+document.getElementById('mapBtn').addEventListener('click', () => window.location.href = "map.html");
+document.getElementById('profileBtn').addEventListener('click', () => window.location.href = "profile_setting.html");
+
 const uName = prompt("I am?");
 const n = document.getElementById('inputMessage');
 let lastSpeaker = '';
