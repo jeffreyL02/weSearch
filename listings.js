@@ -54,22 +54,6 @@ function updateModalState(pg){
   }
 }
 
-//switches mode b/w search and listings
-//    <img src="https://static.thenounproject.com/png/115298-200.png" id="listingToggle" onclick="window.location.href='profile_setting.html'">
-    //<img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/search-512.png" id="searchToggle" onclick="window.location.href='profile_setting.html'">
-let toggle = document.getElementById("toggle");
-toggle.addEventListener("click", toggle());
-function toggle(){
-  if(toggle.src == "https://cdn2.iconfinder.com/data/icons/font-awesome/1792/search-512.png"){
-    toggle.src = "https://static.thenounproject.com/png/115298-200.png";
-    
-  }
-  else{
-
-  }
-}
-
-
 //g e n d e r
 let male = document.getElementById("male");
 let female = document.getElementById("female");

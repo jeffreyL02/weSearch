@@ -45,17 +45,17 @@ input:focus{
   box-shadow: 0px 15px 26px 2px rgba(0,0,0,0.3);
 }
 
-
 #signUp:active{
   background-color: #535e61;
   transform:translateY(0.2vh);
 }
 
 #login{
-  display:inline-block;
-  cursor:pointer;
-  margin-right:32%;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 24%;
   margin-top:3%;
-  font-size: 3vw;
-  color:gray;
+  margin-bottom: 5%;
+  font-size: 4vw;
+  color: gray;
 }

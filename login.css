@@ -39,12 +39,12 @@ h3{
 }
 
 #signUp{
-  display:inline-block;
-  cursor:pointer;
-  margin-right:25%;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 15%;
   margin-bottom: 5%;
-  font-size: 3vw;
-  color:gray;
+  font-size: 4vw;
+  color: gray;
 }
 
 #login{
