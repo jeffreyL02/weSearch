@@ -25,3 +25,11 @@ DB.ref('/listings/' + sID).once('value').then(snapshot => {
   name.style.transformOrigin = "0px 0px";
   name.style.transform = `scaleX(${Math.min(content.offsetWidth / name.offsetWidth * 0.9, 1)})`;
 });
+
+const report = document.getElementById('joinReportBtn');
+let reportToggle = false;
+report.addEventListener('click', () => {
+  reportToggle = !reportToggle;
+  report.style = reportToggle ? "background-color:#A66" : "";
+  report.innerText = reportToggle ? "LEAVE" : "JOIN SEARCH";
+});
