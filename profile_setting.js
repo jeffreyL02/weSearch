@@ -1,3 +1,47 @@
+import {firebaseConfig} from "./init.js"
+firebase.initializeApp(firebaseConfig);
+
+const DB = firebase.database();
+const AUTH = firebase.auth();
+const nickname = document.getElementById('nickname');
+const s_ip = document.getElementById('s_ip');
+const s_rs = document.getElementById('s_rs');
+
+AUTH.onAuthStateChanged(function(user) {
+  if(!user) return;
+  const uID = AUTH.currentUser.uid;
+  DB.ref('/users/'+uID).once('value').then(d => {
+    const v = d.val();
+    document.getElementById('user_name').innerText = (v.forename + ' ' + v.surname).toUpperCase();
+    nickname.placeholder = v.nickname ? `(${nickname.value})` : "no nickname set";
+  });
+  document.getElementById('submitBtn').addEventListener('click', () => {
+    nickname.placeholder = nickname.value ? `(${nickname.value})` : "no nickname set";
+    DB.ref(`/users/${uID}/nickname`).set(nickname.value);
+    nickname.value = "";
+  });
+
+  DB.ref('/listings').once('value').then(snapshot => {
+    const v = snapshot.val(); // v alue
+    if(!v) return console.log("Nothing here.");
+    s_ip.innerHTML = s_rs.innerHTML = "";
+    for(let k in v){  // k ey
+      const P = v[k]; // P erson
+      s_ip.innerHTML += `<div class="report" onclick="window.location.href='report.html?id=${k}'">
+        <img class="profilepic" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png"/>
+        <h5>${P.forename} ${P.surname}</h5>
+      </div>`;
+      if(P.author == uID){
+        s_rs.innerHTML += `<div class="report" onclick="window.location.href='report.html?id=${k}'">
+          <img class="profilepic" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png"/>
+          <h5>${P.forename} ${P.surname}</h5>
+        </div>`;
+      }
+    }
+  })
+});
+
+
 document.getElementById('back').addEventListener('click', () => window.location.href = "listings.html");
 //expand collapisble
 var coll = document.getElementsByClassName("collapsible");

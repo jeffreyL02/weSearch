@@ -2,6 +2,7 @@ import {firebaseConfig} from "./init.js"
 firebase.initializeApp(firebaseConfig);
 
 const DB = firebase.database();
+const AUTH = firebase.auth();
 
 const f = document.getElementById('workspace');
 /*document.addEventListener('click', Event => {
@@ -9,27 +10,39 @@ const f = document.getElementById('workspace');
   //add(~~(Math.random()*names.length), Math.random().toString(36).substr(2));
 });*/
 
-const uName = prompt("I am?");
+document.getElementById('mapBtn').addEventListener('click', () => window.location.href = "map.html");
+document.getElementById('profileBtn').addEventListener('click', () => window.location.href = "profile_setting.html");
+
 const n = document.getElementById('inputMessage');
+const send = document.getElementById('send');
 let lastSpeaker = '';
+
+let uName;
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if(!user) return;
+  uID = AUTH.currentUser.uid;
+  DB.ref('/users/'+uID).once('value').then(d => {
+    const v = d.val();
+    uName = v.forename + ' ' + v.surname;
+  });
+});
+
 n.addEventListener('keypress', Event => {
-  if(Event.key == 'Enter' && n.value){
-    add(/*uName || */"You", n.value, true);
-    DB.ref('/chat').push({
-      author: uName,
-      content: n.value,
-      timestamp: Date.now()
-    });
-    n.value = "";
+  if(Event.key == 'Enter'){
+    add(uName || "You", n.value, true);
   }
 })
+send.addEventListener('click', () => add(uName || "You", n.value, true));
 
 function add(N, M, SELF){
+  if(!M) return;
   if(lastSpeaker == N+''+SELF){
     f.lastChild.lastChild.innerText += "\n" + M;
     f.scrollTop = f.scrollHeight;
     return;
   }
+
   const d = document.createElement('div');
   /*d.innerHTML = "<strong>" + N + "</strong>: " + M;*/
 
@@ -50,6 +63,14 @@ function add(N, M, SELF){
 
   f.append(d);
   f.scrollTop = f.scrollHeight;
+
+
+  DB.ref('/chat').push({
+    author: uName || "John Doe",
+    content: n.value,
+    timestamp: Date.now()
+  });
+  n.value = "";
 }
 
 let time = Date.now() - 60000;

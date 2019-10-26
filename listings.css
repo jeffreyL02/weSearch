@@ -77,8 +77,8 @@ body{
 #modal #pfp{
 	border-radius:50%;
 	background-color:gray;
-	height: 25vh;
-	width: 25vh;
+	height: 22vh;
+	width: 22vh;
 	margin: 0 auto 4em auto;
 	position: relative;
 	bottom: 3vh;
@@ -90,8 +90,8 @@ body{
 	display: inline-block;
 	position: relative;
 	z-index: 9;
-	top: 22vh;
-	left:50vw;
+  top: 19vh;
+  left: 49vw;
 	height:8vh;
 	width:8vh;
 	background-color:rgba(200,200,200,0.6);
@@ -227,7 +227,7 @@ input:focus{
 	display: relative;
 	white-space: nowrap;
 	overflow-x: scroll;
-	font-size: 5.8em;
+	font-size: 5em;
 }
 .personName::-webkit-scrollbar { width: 0 !important }
 .personDate{

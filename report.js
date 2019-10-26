@@ -32,4 +32,5 @@ report.addEventListener('click', () => {
   reportToggle = !reportToggle;
   report.style = reportToggle ? "background-color:#A66" : "";
   report.innerText = reportToggle ? "LEAVE" : "JOIN SEARCH";
+  window.location.href = "chat.html";
 });

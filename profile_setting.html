@@ -6,11 +6,13 @@
   <meta name="viewport" content="user-scalable=0;" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <script defer src = "profile_setting.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+  <script type="module" src="init.js"></script>
+  <script type="module" src="profile_setting.js" defer></script>
 </head>
 <body>
   <div id="header">
-    <img id="back" src="assets/pointLeft.svg">
+    <img id="back" class="icon" src="assets/pointLeft.svg">
     <p id="navLogo">weSearch</p>
   </div>
   <div id="fillerTwo"></div>
@@ -19,45 +21,19 @@
   </div>
   <img id = "pfp" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png" />
   <div id="box">
-    <div id = "content">
-      <h3>JEFFREY LIU</h3>
-      <input id="emailInput" value="email@gmail.com" type="text" />
+    <div id="content">
+      <h3 id="user_name">JEFFREY LIU</h3>
+      <input id="nickname" placeholder="nickname" type="text" />
       <div id="submitBtn">save</div>
     </div>
     <button class="collapsible"><p style="position:relative;bottom:1vh;">
       searches in progress</p>
     </button>
-    <div class="content" style="max-height:0px">
-      <div class="report">
-        <img class="profilepic" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png" />
-        <h5>Thomas Li</h5>
-      </div>
-    </div>
+    <div class="content" style="max-height:0px" id="s_ip"></div>
     <button class="collapsible"><p style="position:relative;bottom:1vh;">
       reports submitted</p>
     </button>
-    <div class="content" style="max-height:0px">
-      <div class="report">
-        <img class="profilepic" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png" />
-        <h5>Thomas Li</h5>
-      </div>
-      <div class="report">
-        <img class="profilepic" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png" />
-        <h5>Thomas Li</h5>
-      </div>
-      <div class="report">
-        <img class="profilepic" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png" />
-        <h5>Thomas Li</h5>
-      </div>
-      <div class="report">
-        <img class="profilepic" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png" />
-        <h5>Thomas Li</h5>
-      </div>
-      <div class="report">
-        <img class="profilepic" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png" />
-        <h5>Thomas Li</h5>
-      </div>
-    </div>
+    <div class="content" style="max-height:0px" id="s_rs"></div>
   </div>
 </body>
 </html>
