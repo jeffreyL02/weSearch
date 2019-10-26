@@ -55,12 +55,12 @@ const FETCHLOCATION = async result => {
       for(let k in dv){
         const v = dv[k];
         const _x = (N - v.t)/4000;
-        console.log(_x, (32 - (Math.pow(_x, 3)>>16) - (_x>>4))/128);
+        if(_x > 1024) continue;
         L.circle([v.y, v.x], {
           stroke: false,
-          fillOpacity: (32 - (Math.pow(_x, 3)>>16) - (_x>>4))/512,
+          fillOpacity: Math.min(Math.max((32 - (Math.pow(_x, 3)>>16) - (_x>>4))/1024, 0.04), 0.24),
           fillColor: '#ff0000',
-          radius: _x
+          radius: Math.max(400, 100+_x/3)
         }).addTo(map);
       }
     });
@@ -72,7 +72,7 @@ const FETCHLOCATION = async result => {
       SELF.setLatLng([position.coords.latitude, position.coords.longitude]);
       DB.ref('/users/'+uID).once('value').then(d => {
         const v = d.val();
-        const uName = v.forename + ' ' + v.surname;
+        const uName = v.nickname || (v.forename + ' ' + v.surname);
         if (shareLocation) {
           console.log("Logging...");
           DB.ref("/tracker/" + uID).set({
@@ -116,7 +116,7 @@ DB.ref("/tracker").on("value", snapshot => {
       o[k] = L.marker([d.y, d.x]).addTo(map)
         .bindPopup(d.u)
         .openPopup()
-        .setIcon(`<center>${ICON_OTHERS}</center>`)
+        .setIcon(new ICON_OTHERS)
         .setOpacity(0.5);
     }
   }
