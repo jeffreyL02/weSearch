@@ -3,6 +3,7 @@ firebase.initializeApp(firebaseConfig);
 
 const DB = firebase.database();
 const AUTH = firebase.auth();
+const ICON_CHEESE_PAYLOAD = ["assets/defaultIcon.png"];
 
 //pop up modal
 let black=document.getElementById("black");
@@ -105,11 +106,12 @@ const workspace = document.getElementById('workspace');
 DB.ref('/listings').on('value', snapshot => {
   const v = snapshot.val(); // v alue
   if(!v) return console.log("Nothing here.");
+  let ct = 0;
   workspace.innerHTML = "";
   for(let k in v){  // k ey
     const P = v[k]; // P erson
     workspace.innerHTML += `<div class="person" onclick="window.location.href='report.html?id=${k}'">
-      <img src="assets/defaultIcon.png">
+      <img src="${ICON_CHEESE_PAYLOAD[ct++ % ICON_CHEESE_PAYLOAD.length]}">
       <div class="info">
         <p class="personName">${P.forename} ${P.surname}</p>
         <p class="personDate">date last seen: ${P.lastSeen || "Unknown"}</p>
