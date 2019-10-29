@@ -60,7 +60,7 @@ const FETCHLOCATION = async result => {
           stroke: false,
           fillOpacity: Math.min(Math.max((32 - (Math.pow(_x, 3)>>16) - (_x>>4))/1024, 0.04), 0.24),
           fillColor: '#ff0000',
-          radius: Math.max(400, 100+_x/3)
+          radius: Math.max(80, 50+_x/10)
         }).addTo(map);
       }
     });
