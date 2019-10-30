@@ -3,7 +3,7 @@ firebase.initializeApp(firebaseConfig);
 
 const DB = firebase.database();
 const AUTH = firebase.auth();
-const ICON_CHEESE_PAYLOAD = ["assets/defaultIcon.png"];
+const ICON_CHEESE_PAYLOAD = [/*"assets/defaultIcon.png", */"assets/person1.jpg", "assets/person2.jpg", "assets/person3.jpg", "assets/person4.jpg", "assets/person5.jpg", "assets/person6.jpg"];
 
 //pop up modal
 let black=document.getElementById("black");
@@ -110,7 +110,7 @@ DB.ref('/listings').on('value', snapshot => {
   workspace.innerHTML = "";
   for(let k in v){  // k ey
     const P = v[k]; // P erson
-    workspace.innerHTML += `<div class="person" onclick="window.location.href='report.html?id=${k}'">
+    workspace.innerHTML += `<div class="person" onclick="window.location.href='report.html?id=${k}&p=${ICON_CHEESE_PAYLOAD[ct % ICON_CHEESE_PAYLOAD.length].split('/')[1]}'">
       <img src="${ICON_CHEESE_PAYLOAD[ct++ % ICON_CHEESE_PAYLOAD.length]}">
       <div class="info">
         <p class="personName">${P.forename} ${P.surname}</p>

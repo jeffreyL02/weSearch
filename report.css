@@ -57,6 +57,7 @@ h3{
   z-index: 2;
   position: absolute;
   width: 35vw;
+  height: 35vw;
   margin: 28% 0 9% 32%;
   border-radius: 50%;
 }

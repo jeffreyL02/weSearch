@@ -1,4 +1,6 @@
-const sID = window.location.href.split('?id=')[1];
+const uDat = window.location.href.split('?')[1];
+const sID = uDat.split('&')[0].replace('id=', '');
+const pic = uDat.split('&')[1].replace('p=', '');
 if(!sID) window.location.href = "listings.html";
 
 import {firebaseConfig} from "./init.js"
@@ -12,6 +14,10 @@ const name = document.getElementById('reportName');
 const content = document.getElementById('content');
 const desc = document.getElementById('reportDesc');
 const lastSeen = document.getElementById("lastSeen");
+
+document.getElementById('pfp').src = '/assets/'+pic;
+console.log('/listings/' + sID);
+
 DB.ref('/listings/' + sID).once('value').then(snapshot => {
   let v = snapshot.val();
   name.innerText = (v.forename + ' ' + v.surname).toUpperCase();
