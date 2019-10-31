@@ -38,7 +38,7 @@ var SELF = L.marker([0, 0]).addTo(map)
 
 var tL = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-	maxZoom: 18,
+	maxZoom: 19,
 	id: 'mapbox.streets',
 	accessToken: 'pk.eyJ1Ijoibm92YXNhZ2l0dGFyaWkiLCJhIjoiY2sxbXEwbW5xMDNkcDNicWI2bmUyaWcxeSJ9.bZbAhftOh_Y9lfLMLpJVCQ'
 });
@@ -60,11 +60,12 @@ const FETCHLOCATION = async result => {
           stroke: false,
           fillOpacity: Math.min(Math.max((32 - (Math.pow(_x, 3)>>16) - (_x>>4))/1024, 0.04), 0.24),
           fillColor: '#ff0000',
-          radius: Math.max(80, 50+_x/10)
+          radius: Math.max(30, 15+_x/20)
         }).addTo(map);
       }
     });
 
+    map.setZoom(13);
     navigator.geolocation.getCurrentPosition(position => map.flyTo([position.coords.latitude, position.coords.longitude], 13));
 
     const shareLocation = true;
@@ -113,11 +114,12 @@ DB.ref("/tracker").on("value", snapshot => {
     if (o[k]){
       o[k].setLatLng([d.y, d.x]);
     }else{
-      o[k] = L.marker([d.y, d.x]).addTo(map)
+      o[k] = new L.marker([d.y, d.x]).addTo(map)
         .bindPopup(d.u)
         .openPopup()
-        .setIcon(new ICON_OTHERS)
+        .setIcon(ICON_OTHERS)
         .setOpacity(0.5);
+      console.log(o[k], !!o[k]);
     }
   }
 });
