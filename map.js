@@ -103,7 +103,6 @@ DB.ref("/tracker").on("value", snapshot => {
   for (let k in v) {
     // key
     let d = v[k]; // data
-    if (k == uID) continue; // self
     if (Date.now() - d.t > 60 * 1000) continue; // 1 minute
     L.circle([d.y, d.x], {
       stroke: false,
@@ -111,6 +110,7 @@ DB.ref("/tracker").on("value", snapshot => {
       fillColor: '#ffaa00',
       radius: 15
     }).addTo(map);
+    if (k == uID) continue; // self
     if (o[k]){
       o[k].setLatLng([d.y, d.x]);
     }else{
