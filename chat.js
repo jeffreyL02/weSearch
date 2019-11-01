@@ -67,7 +67,7 @@ function add(N, M, SELF){
   f.append(d);
   f.scrollTop = f.scrollHeight;
 
-
+  console.log(uName || "John Doe", VAL, Date.now());
   DB.ref('/chat').push({
     author: uName || "John Doe",
     content: VAL,
@@ -78,12 +78,15 @@ function add(N, M, SELF){
 let time = Date.now() - 60000;
 DB.ref('/chat').on('child_added', snapshot => {
   const v = snapshot.val(); // value
-  console.log(Date.now(), time, v);
+  /*console.log(Date.now(), time, v);
   for(let k in v){
     if(!v[k] || v[k].author == (uName || "John Doe")) continue;
     if(v[k].timestamp > time){
       add(v[k].author, v[k].content, false);
     }
-  }
+  }*/
+  console.log(v, v.author);
+  if(!v || v.author == (uName || "John Doe")) return;
+  add(v.author, v.content, false);
    //   time = Date.now();
 });
