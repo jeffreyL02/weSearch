@@ -37,6 +37,7 @@ send.addEventListener('click', () => add(uName || "You", n.value, true));
 
 function add(N, M, SELF){
   console.log(N, M, SELF);
+  const VAL = document.getElementById('inputMessage').value;
   if(SELF) document.getElementById('inputMessage').value = "";
   if(!M) return;
   if(lastSpeaker == (N+''+SELF)){
@@ -69,7 +70,7 @@ function add(N, M, SELF){
 
   DB.ref('/chat').push({
     author: uName || "John Doe",
-    content: document.getElementById('inputMessage').value,
+    content: VAL,
     timestamp: Date.now()
   });
 }
