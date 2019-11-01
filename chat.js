@@ -17,7 +17,7 @@ const n = document.getElementById('inputMessage');
 const send = document.getElementById('send');
 let lastSpeaker = '';
 
-let uName;
+let uName, uID;
 
 firebase.auth().onAuthStateChanged(function(user) {
   if(!user) return;
@@ -36,8 +36,10 @@ n.addEventListener('keypress', Event => {
 send.addEventListener('click', () => add(uName || "You", n.value, true));
 
 function add(N, M, SELF){
+  console.log(N, M, SELF);
+  if(SELF) document.getElementById('inputMessage').value = "";
   if(!M) return;
-  if(lastSpeaker == N+''+SELF){
+  if(lastSpeaker == (N+''+SELF)){
     f.lastChild.lastChild.innerText += "\n" + M;
     f.scrollTop = f.scrollHeight;
     return;
@@ -67,21 +69,20 @@ function add(N, M, SELF){
 
   DB.ref('/chat').push({
     author: uName || "John Doe",
-    content: n.value,
+    content: document.getElementById('inputMessage').value,
     timestamp: Date.now()
   });
-  n.value = "";
 }
 
 let time = Date.now() - 60000;
-DB.ref('/chat').on('value', snapshot => {
+DB.ref('/chat').on('child_added', snapshot => {
   const v = snapshot.val(); // value
-  console.log(v);
+  console.log(Date.now(), time, v);
   for(let k in v){
     if(!v[k] || v[k].author == (uName || "John Doe")) continue;
     if(v[k].timestamp > time){
       add(v[k].author, v[k].content, false);
     }
   }
-  time = Date.now();
+   //   time = Date.now();
 });
