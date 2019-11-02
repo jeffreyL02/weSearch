@@ -7,6 +7,8 @@ const nickname = document.getElementById('nickname');
 const s_ip = document.getElementById('s_ip');
 const s_rs = document.getElementById('s_rs');
 
+const ICON_CHEESE_PAYLOAD = [/*"assets/defaultIcon.png", */"assets/person1.jpg", "assets/person2.jpg", "assets/person3.jpg", "assets/person4.jpg", "assets/person5.jpg", "assets/person6.jpg"];
+
 AUTH.onAuthStateChanged(function(user) {
   if(!user) return;
   const uID = AUTH.currentUser.uid;
@@ -25,17 +27,16 @@ AUTH.onAuthStateChanged(function(user) {
     const v = snapshot.val(); // v alue
     if(!v) return console.log("Nothing here.");
     s_ip.innerHTML = s_rs.innerHTML = "";
+    let ct = 0;
     for(let k in v){  // k ey
       const P = v[k]; // P erson
-      s_ip.innerHTML += `<div class="report" onclick="window.location.href='report.html?id=${k}'">
-        <img class="profilepic" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png"/>
+      const innerHTML = `<div class="report" onclick="window.location.href='report.html?id=${k}&p=${ICON_CHEESE_PAYLOAD[ct % ICON_CHEESE_PAYLOAD.length].split('/')[1]}'">
+        <img class="profilepic" src="${ICON_CHEESE_PAYLOAD[ct++ % ICON_CHEESE_PAYLOAD.length]}"/>
         <h5>${P.forename} ${P.surname}</h5>
       </div>`;
+      if((P.u && P.u[AUTH.currentUser.uid]) || P.author == uID) s_ip.innerHTML += innerHTML;
       if(P.author == uID){
-        s_rs.innerHTML += `<div class="report" onclick="window.location.href='report.html?id=${k}'">
-          <img class="profilepic" src="https://feedback.seekingalpha.com/s/cache/37/2f/372fecf1311f9a879f7c73d3aaad78e4.png"/>
-          <h5>${P.forename} ${P.surname}</h5>
-        </div>`;
+        s_rs.innerHTML += innerHTML;
       }
     }
   })
