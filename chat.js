@@ -67,12 +67,14 @@ function add(N, M, SELF){
   f.append(d);
   f.scrollTop = f.scrollHeight;
 
-  console.log(uName || "John Doe", VAL, Date.now());
-  DB.ref('/chat').push({
-    author: uName || "John Doe",
-    content: VAL,
-    timestamp: Date.now()
-  });
+  if(VAL.length){
+    console.log(uName || "John Doe", VAL, Date.now());
+    DB.ref('/chat').push({
+      author: uName || "John Doe",
+      content: VAL,
+      timestamp: Date.now()
+    });
+  }
 }
 
 let time = Date.now() - 60000;

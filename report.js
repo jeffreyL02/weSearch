@@ -9,6 +9,8 @@ firebase.initializeApp(firebaseConfig);
 document.getElementById('back').addEventListener('click', () => window.location.href = "listings.html");
 
 const DB = firebase.database();
+const AUTH = firebase.auth();
+
 const info = document.getElementsByClassName('info');
 const name = document.getElementById('reportName');
 const content = document.getElementById('content');
@@ -38,5 +40,19 @@ report.addEventListener('click', () => {
   reportToggle = !reportToggle;
   report.style = reportToggle ? "background-color:#A66" : "";
   report.innerText = reportToggle ? "LEAVE" : "JOIN SEARCH";
-  window.location.href = "chat.html";
+  DB.ref('/listings/' + sID + '/u/' + AUTH.currentUser.uid).set(reportToggle+0).then(() => {
+    window.location.href = reportToggle ? "chat.html" : "listings.html";
+  });
+});
+
+AUTH.onAuthStateChanged(user => {
+  if(!user) return;
+  DB.ref('/listings/' + sID + '/u/' + AUTH.currentUser.uid).once('value').then(snapshot => {
+    let v = snapshot.val();
+    if(v){
+      reportToggle = true;
+      report.style = reportToggle ? "background-color:#A66" : "";
+      report.innerText = reportToggle ? "LEAVE" : "JOIN SEARCH";
+    }
+  });
 });
